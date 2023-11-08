@@ -13,7 +13,7 @@ int main(){
     
     printf("Type second: ");
     scanf("%lf", &secondnum);
-    printf("Type operation (+/-/*///^) -> ");
+    printf("Type operation (+/-/*///^/%/!/C/A) -> ");
     scanf(" %c", &operation);
 
     printf("ANswer: ");
@@ -35,6 +35,15 @@ int main(){
             break;
 	case '%':
 	    printf("%f\n", returnMode(firstnum, secondnum));
+	    break;
+	case '!':
+	    printf("%f and %f\n", returnFact(firstnum), returnFact(secondnum));
+	    break;
+	case 'C':
+	    printf("%f\n", returnComb(firstnum, secondnum));
+	    break;
+	case 'A':
+	    printf("%f\n", returnA(firstnum, secondnum));
 	    break;
         default :
             printf("operation are not correct\n");
